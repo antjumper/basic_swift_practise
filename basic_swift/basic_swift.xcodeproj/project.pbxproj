@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		A45924E41E4B2E17009E69C3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45924E31E4B2E17009E69C3 /* main.swift */; };
+		A480284E1ED684DD00270C28 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A480284D1ED684DD00270C28 /* Stack.swift */; };
+		A48028501ED6880A00270C28 /* SwiftFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A480284F1ED6880A00270C28 /* SwiftFunction.swift */; };
+		A48028521ED68D5500270C28 /* SwiftClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48028511ED68D5500270C28 /* SwiftClass.swift */; };
+		A48028541ED6A24C00270C28 /* willSetAnddidSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48028531ED6A24C00270C28 /* willSetAnddidSet.swift */; };
+		A48028561ED6A68400270C28 /* SwiftStaticPropertyANDFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48028551ED6A68400270C28 /* SwiftStaticPropertyANDFunction.swift */; };
+		A48028581ED6AE3D00270C28 /* swiftDefine_[].swift in Sources */ = {isa = PBXBuildFile; fileRef = A48028571ED6AE3D00270C28 /* swiftDefine_[].swift */; };
+		A480285A1ED6C00600270C28 /* SwtiftAccessRights .swift in Sources */ = {isa = PBXBuildFile; fileRef = A48028591ED6C00600270C28 /* SwtiftAccessRights .swift */; };
+		A480285C1ED6C37200270C28 /* SwiftFileOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A480285B1ED6C37200270C28 /* SwiftFileOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +33,15 @@
 /* Begin PBXFileReference section */
 		A45924E01E4B2E17009E69C3 /* basic_swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = basic_swift; sourceTree = BUILT_PRODUCTS_DIR; };
 		A45924E31E4B2E17009E69C3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A480284D1ED684DD00270C28 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		A480284F1ED6880A00270C28 /* SwiftFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftFunction.swift; sourceTree = "<group>"; };
+		A48028511ED68D5500270C28 /* SwiftClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftClass.swift; sourceTree = "<group>"; };
+		A48028531ED6A24C00270C28 /* willSetAnddidSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = willSetAnddidSet.swift; sourceTree = "<group>"; };
+		A48028551ED6A68400270C28 /* SwiftStaticPropertyANDFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftStaticPropertyANDFunction.swift; sourceTree = "<group>"; };
+		A48028571ED6AE3D00270C28 /* swiftDefine_[].swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "swiftDefine_[].swift"; sourceTree = "<group>"; };
+		A48028591ED6C00600270C28 /* SwtiftAccessRights .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwtiftAccessRights .swift"; sourceTree = "<group>"; };
+		A480285B1ED6C37200270C28 /* SwiftFileOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftFileOperation.swift; sourceTree = "<group>"; };
+		A480285D1ED6CA5C00270C28 /* test1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = test1.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +75,15 @@
 			isa = PBXGroup;
 			children = (
 				A45924E31E4B2E17009E69C3 /* main.swift */,
+				A480284D1ED684DD00270C28 /* Stack.swift */,
+				A480284F1ED6880A00270C28 /* SwiftFunction.swift */,
+				A48028511ED68D5500270C28 /* SwiftClass.swift */,
+				A48028531ED6A24C00270C28 /* willSetAnddidSet.swift */,
+				A48028551ED6A68400270C28 /* SwiftStaticPropertyANDFunction.swift */,
+				A48028571ED6AE3D00270C28 /* swiftDefine_[].swift */,
+				A48028591ED6C00600270C28 /* SwtiftAccessRights .swift */,
+				A480285B1ED6C37200270C28 /* SwiftFileOperation.swift */,
+				A480285D1ED6CA5C00270C28 /* test1.txt */,
 			);
 			path = basic_swift;
 			sourceTree = "<group>";
@@ -120,6 +146,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A480285A1ED6C00600270C28 /* SwtiftAccessRights .swift in Sources */,
+				A480285C1ED6C37200270C28 /* SwiftFileOperation.swift in Sources */,
+				A48028561ED6A68400270C28 /* SwiftStaticPropertyANDFunction.swift in Sources */,
+				A48028501ED6880A00270C28 /* SwiftFunction.swift in Sources */,
+				A480284E1ED684DD00270C28 /* Stack.swift in Sources */,
+				A48028581ED6AE3D00270C28 /* swiftDefine_[].swift in Sources */,
+				A48028541ED6A24C00270C28 /* willSetAnddidSet.swift in Sources */,
+				A48028521ED68D5500270C28 /* SwiftClass.swift in Sources */,
 				A45924E41E4B2E17009E69C3 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +284,7 @@
 				A45924E91E4B2E17009E69C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
