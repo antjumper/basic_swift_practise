@@ -31,6 +31,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A444ED421EDEB5EB00728715 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		A444ED431EDEDD8500728715 /* BinarySearch.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = BinarySearch.playground; sourceTree = "<group>"; };
+		A444ED441EDEE3CC00728715 /* Trees.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Trees.playground; sourceTree = "<group>"; };
 		A45924E01E4B2E17009E69C3 /* basic_swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = basic_swift; sourceTree = BUILT_PRODUCTS_DIR; };
 		A45924E31E4B2E17009E69C3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A480284D1ED684DD00270C28 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				A45924E31E4B2E17009E69C3 /* main.swift */,
+				A444ED421EDEB5EB00728715 /* MyPlayground.playground */,
 				A480284D1ED684DD00270C28 /* Stack.swift */,
 				A480284F1ED6880A00270C28 /* SwiftFunction.swift */,
 				A48028511ED68D5500270C28 /* SwiftClass.swift */,
@@ -84,6 +88,8 @@
 				A48028591ED6C00600270C28 /* SwtiftAccessRights .swift */,
 				A480285B1ED6C37200270C28 /* SwiftFileOperation.swift */,
 				A480285D1ED6CA5C00270C28 /* test1.txt */,
+				A444ED431EDEDD8500728715 /* BinarySearch.playground */,
+				A444ED441EDEE3CC00728715 /* Trees.playground */,
 			);
 			path = basic_swift;
 			sourceTree = "<group>";

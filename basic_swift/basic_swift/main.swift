@@ -147,7 +147,7 @@ func merger(leftPile:[Int], rightPile:[Int]) -> [Int]{
     return orderedPile
 }
 
-//归并方法 ---跳过拆分过程，直接从合并数组开始。这种方法称作从下向上
+//归并方法 ---跳过拆分过程，直接从合并数组开始。这种方法称作从下向上 ------ 这个方法值得在此研究
 
 func mergeSortBottomUp<T>(_ a: [T], _ isOrderedBefore: (T, T) -> Bool) -> [T] {
     let n = a.count
@@ -191,7 +191,7 @@ func mergeSortBottomUp<T>(_ a: [T], _ isOrderedBefore: (T, T) -> Bool) -> [T] {
             }
             
             i += width*2
-            print("width = \(width), d = \(d), i = \(i), array =  \(array)")
+            print("width = \(width), d = \(d), i = \(i), z =  \(z)")
         }
         
         width *= 2
@@ -199,8 +199,8 @@ func mergeSortBottomUp<T>(_ a: [T], _ isOrderedBefore: (T, T) -> Bool) -> [T] {
     }
     return z[d]
 }
-let array = [2, 1, 5, 4, 9]
-
-print(mergeSortBottomUp(array, <))
+//let array = [2, 1, 5, 4, 9]
+//
+//print(mergeSortBottomUp(array, <))
   // [1, 2, 4, 5, 9]
 
