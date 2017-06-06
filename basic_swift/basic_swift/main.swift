@@ -78,9 +78,132 @@ func insertionSort(_ array:[Int]) -> [Int]{
     return a
 }
 
+//---- 选择排序 -----
+//插值排序 类似的 选择排序 插值 是 每次直接取出来一个插入前面 使之有序   而选择排序 则是 每次从后面取出一个最小或最大 放入前面的有序部分 使之有序
+
+func selectionSort(_ array:[Int]) -> [Int] {
+    
+    guard array.count > 1 else { return array }//1
+    
+    var a = array
+    
+    for x in 0..<a.count - 1 {  //后面是整个数组的筛选 所以只需选择 n-1 次之后就是有序了
+        var lowest = x
+        for y in x+1 ..< a.count { //整个后半部分 去筛选
+            if a[y] < a[lowest] {
+                lowest = y
+            }
+        }
+        
+        if x != lowest {
+            swap(&a[x], &a[lowest])
+        }
+        
+    }
+    
+    return a
+    
+}
+
+print("-------------选择排序 start---------------")
+
+let listselectionSort = [ 10, -1, 3, 9, 2, 27, 8, 5, 1, 3, 0, 26 ]
+
+
+print(selectionSort(listselectionSort))
+
+print("-------------选择排序 end---------------")
+
+
+
+
+
+//*******希尔排序**********
+//希尔排序 是不断分割原数组成N（比如原数组的一半个较小的数组） 个小数组，再在小数组里面进行插值排序  之后切分成更少的数据快 （比如 元素组一般的一半）重复上述过程直到分割的数组是1 进行最后一次交换 然后就可以是排序好的数组 好的话 复杂度是nlogn 不好的话是 n2（平方）
+
+
+
+
+
+print("-------------希尔排序 start---------------")
+
+var array = [64, 20, 50, 33, 72, 10, 23, -1, 4,5]
+
+public func shellSort(_ list:inout [Int]){
+    
+    var sublistCount = list.count / 2  //分成多少个小数组
+    
+    while sublistCount > 0 {  //sublistCount 等于1  是最后一次的排序
+        
+        for index  in 0 ..< list.count { // 根据 sublistCount 当前分割的数组分别进行一次排序
+            
+            guard index + sublistCount < list.count else { break }
+            
+            if list[index] > list[index + sublistCount] {
+                swap(&list[index], &list[index + sublistCount])
+            }
+            
+//            //如果是 == 1 间隔是1  的时候 那么久执行一次 类似插值排序 前面是有序插入
+//            guard sublistCount == 1 && index > 0  else { continue }
+//            
+//            if list[index - 1] > list[index] {
+//                swap(&list[index - 1], &list[index])
+//            }
+            
+        }
+        
+        sublistCount = sublistCount / 2   //按照sublistCount切割的小数组排序一次之后sublistCount递减
+
+    }
+    
+}
+shellSort(&array)
+
+
+print(array)
+
+/*
+ 
+ 第一次排序
+ 
+ sublistCount = floor(9/2) = 4
+ 
+ sublist 0:  [ 64, xx, xx, xx, 72, xx, xx, xx, 4  ]
+ sublist 1:  [ xx, 20, xx, xx, xx, 10, xx, xx, xx ]
+ sublist 2:  [ xx, xx, 50, xx, xx, xx, 23, xx, xx ]
+ sublist 3:  [ xx, xx, xx, 33, xx, xx, xx, -1, xx ]
+ 
+ 结果 
+ sublist 0:  [ 4, xx, xx, xx, 64, xx, xx, xx, 72 ]
+ sublist 1:  [ xx, 10, xx, xx, xx, 20, xx, xx, xx ]
+ sublist 2:  [ xx, xx, 23, xx, xx, xx, 50, xx, xx ]
+ sublist 3:  [ xx, xx, xx, -1, xx, xx, xx, 33, xx ]
+ 
+ 第二次排序
+ sublistCount = floor(4/2) = 2
+ sublist 0:  [  4, xx, 23, xx, 64, xx, 50, xx, 72 ]
+ sublist 1:  [ xx, 10, xx, -1, xx, 20, xx, 33, xx ]
+ 排序结果 
+ sublist 0:  [  4, xx, 23, xx, 50, xx, 64, xx, 72 ]
+ sublist 1:  [ xx, -1, xx, 10, xx, 20, xx, 33, xx ]
+ 
+ 第三次排序
+  sublistCount = floor(2/2) = 1
+  sublist 1:  [ 4, -1, 23, 10, 50, 20, 64, 33, 72]
+ */
+
+
+print("-------------希尔排序 end---------------")
+
+
+print("-------------插入排序 start---------------")
 
 let list = [ 10, -1, 3, 9, 2, 27, 8, 5, 1, 3, 0, 26 ]
+
 print(insertionSort(list))
+
+
+print("-------------插入排序 end---------------")
 
 //Merge Sort  归并排序
 
