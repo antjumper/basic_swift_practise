@@ -143,12 +143,14 @@ public func shellSort(_ list:inout [Int]){
                 swap(&list[index], &list[index + sublistCount])
             }
             
-//            //如果是 == 1 间隔是1  的时候 那么久执行一次 类似插值排序 前面是有序插入
-//            guard sublistCount == 1 && index > 0  else { continue }
-//            
-//            if list[index - 1] > list[index] {
-//                swap(&list[index - 1], &list[index])
-//            }
+            
+            //------msg:住一块为什么要要呢 不是很理解  ---
+            //如果是 == 1 间隔是1  的时候 那么久执行一次 类似插值排序 前面是有序插入
+            guard sublistCount == 1 && index > 0  else { continue }
+            
+            if list[index - 1] > list[index] {
+                swap(&list[index - 1], &list[index])
+            }
             
         }
         
