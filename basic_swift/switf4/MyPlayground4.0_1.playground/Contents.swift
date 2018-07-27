@@ -102,3 +102,47 @@ tuple11 < tuple12 // true
 //也是特有的操作符  比如区间运算符   [begin, end)的半开半闭区间：begin ..< end：
 
 //逻辑运算符  !  &&  ||
+
+
+
+//==================第五节：忘记旧有的"C风格"字符串吧=============================  这个是 UTC 基础的讲解 对 理解 string的底层实现很有帮助
+//这个章节 保存在了印象笔记里面了
+//==================第六节：String和NSString处理Unicode时的差异=============================
+//除了code unit的长度可变之外，在这一节，我们将看到unicode另外一个可变的特性，即组成同一个字符的code unit组合也是可变的
+//而区分String和NSString的一个重要方式，就是它们对unicode的这个特性的处理方式，是不同的
+
+
+//==================第六节：基于unicode的字符串常用操作=============================
+//=========================== 字符串练习 ===========================
+
+var mixString :String = "Swift很有趣"
+//遍历
+//        for (index,value) in mixStr.enumerated() {
+//            print("\(index): \(value)")
+//        }
+
+//插入
+//        if let index = mixStr.index(of: "很") {
+//            mixStr.insert(contentsOf: "3.0", at: index)
+//            print(mixStr)
+//        }
+
+//Range的查找和替换
+if let cnIndex = mixString.index(of: "很") {
+    mixString.replaceSubrange(cnIndex ..< mixString.endIndex, with: " is intersting")
+    print(mixString)
+}
+
+//字符串切片
+let swiftView = mixString.suffix(12).dropLast();
+print(String(swiftView))
+
+
+let strViews = mixString.characters.split(separator: " ")
+strViews.map(String.init)
+// ["Swift", "3.0", "is", "interesting!"]
+
+
+
+
+
