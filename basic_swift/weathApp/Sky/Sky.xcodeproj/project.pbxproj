@@ -1,0 +1,663 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A4660F3D210DFA2200C52AB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4660F3C210DFA2200C52AB2 /* AppDelegate.swift */; };
+		A4660F3F210DFA2200C52AB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4660F3E210DFA2200C52AB2 /* ViewController.swift */; };
+		A4660F42210DFA2200C52AB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4660F40210DFA2200C52AB2 /* Main.storyboard */; };
+		A4660F44210DFA2400C52AB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4660F43210DFA2400C52AB2 /* Assets.xcassets */; };
+		A4660F47210DFA2400C52AB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4660F45210DFA2400C52AB2 /* LaunchScreen.storyboard */; };
+		A4660F52210DFA2400C52AB2 /* SkyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4660F51210DFA2400C52AB2 /* SkyTests.swift */; };
+		A4660F5D210DFA2400C52AB2 /* SkyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4660F5C210DFA2400C52AB2 /* SkyUITests.swift */; };
+		A4660F72210DFE4E00C52AB2 /* Configuratioin..swift in Sources */ = {isa = PBXBuildFile; fileRef = A4660F71210DFE4E00C52AB2 /* Configuratioin..swift */; };
+		A4660F75210DFF4300C52AB2 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4660F74210DFF4300C52AB2 /* Location.swift */; };
+		A4660F78210DFFBE00C52AB2 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4660F77210DFFBE00C52AB2 /* WeatherData.swift */; };
+		A4660F7B210E008D00C52AB2 /* WeatherDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4660F7A210E008D00C52AB2 /* WeatherDataManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A4660F4E210DFA2400C52AB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4660F31210DFA2200C52AB2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4660F38210DFA2200C52AB2;
+			remoteInfo = Sky;
+		};
+		A4660F59210DFA2400C52AB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4660F31210DFA2200C52AB2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4660F38210DFA2200C52AB2;
+			remoteInfo = Sky;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A4660F39210DFA2200C52AB2 /* Sky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sky.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4660F3C210DFA2200C52AB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A4660F3E210DFA2200C52AB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A4660F41210DFA2200C52AB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A4660F43210DFA2400C52AB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A4660F46210DFA2400C52AB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A4660F48210DFA2400C52AB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4660F4D210DFA2400C52AB2 /* SkyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4660F51210DFA2400C52AB2 /* SkyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyTests.swift; sourceTree = "<group>"; };
+		A4660F53210DFA2400C52AB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4660F58210DFA2400C52AB2 /* SkyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4660F5C210DFA2400C52AB2 /* SkyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyUITests.swift; sourceTree = "<group>"; };
+		A4660F5E210DFA2400C52AB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4660F71210DFE4E00C52AB2 /* Configuratioin..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuratioin..swift; sourceTree = "<group>"; };
+		A4660F74210DFF4300C52AB2 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		A4660F77210DFFBE00C52AB2 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		A4660F7A210E008D00C52AB2 /* WeatherDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A4660F36210DFA2200C52AB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4660F4A210DFA2400C52AB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4660F55210DFA2400C52AB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A4660F30210DFA2200C52AB2 = {
+			isa = PBXGroup;
+			children = (
+				A4660F3B210DFA2200C52AB2 /* Sky */,
+				A4660F50210DFA2400C52AB2 /* SkyTests */,
+				A4660F5B210DFA2400C52AB2 /* SkyUITests */,
+				A4660F3A210DFA2200C52AB2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A4660F3A210DFA2200C52AB2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4660F39210DFA2200C52AB2 /* Sky.app */,
+				A4660F4D210DFA2400C52AB2 /* SkyTests.xctest */,
+				A4660F58210DFA2400C52AB2 /* SkyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4660F3B210DFA2200C52AB2 /* Sky */ = {
+			isa = PBXGroup;
+			children = (
+				A4660F79210E007400C52AB2 /* Manager */,
+				A4660F73210DFF2A00C52AB2 /* Models */,
+				A4660F70210DFE0700C52AB2 /* Configuration */,
+				A4660F6F210DFA9600C52AB2 /* ViewControllers */,
+				A4660F6E210DFA8500C52AB2 /* SupportiongFiles */,
+				A4660F6C210DFA6A00C52AB2 /* Storyboard */,
+				A4660F6B210DFA5C00C52AB2 /* Resources */,
+				A4660F6A210DFA4F00C52AB2 /* Delegate */,
+			);
+			path = Sky;
+			sourceTree = "<group>";
+		};
+		A4660F50210DFA2400C52AB2 /* SkyTests */ = {
+			isa = PBXGroup;
+			children = (
+				A4660F51210DFA2400C52AB2 /* SkyTests.swift */,
+				A4660F53210DFA2400C52AB2 /* Info.plist */,
+			);
+			path = SkyTests;
+			sourceTree = "<group>";
+		};
+		A4660F5B210DFA2400C52AB2 /* SkyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A4660F5C210DFA2400C52AB2 /* SkyUITests.swift */,
+				A4660F5E210DFA2400C52AB2 /* Info.plist */,
+			);
+			path = SkyUITests;
+			sourceTree = "<group>";
+		};
+		A4660F6A210DFA4F00C52AB2 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				A4660F3C210DFA2200C52AB2 /* AppDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		A4660F6B210DFA5C00C52AB2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A4660F43210DFA2400C52AB2 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A4660F6C210DFA6A00C52AB2 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				A4660F40210DFA2200C52AB2 /* Main.storyboard */,
+				A4660F45210DFA2400C52AB2 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		A4660F6E210DFA8500C52AB2 /* SupportiongFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A4660F48210DFA2400C52AB2 /* Info.plist */,
+			);
+			path = SupportiongFiles;
+			sourceTree = "<group>";
+		};
+		A4660F6F210DFA9600C52AB2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A4660F3E210DFA2200C52AB2 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A4660F70210DFE0700C52AB2 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				A4660F71210DFE4E00C52AB2 /* Configuratioin..swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		A4660F73210DFF2A00C52AB2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A4660F74210DFF4300C52AB2 /* Location.swift */,
+				A4660F77210DFFBE00C52AB2 /* WeatherData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A4660F79210E007400C52AB2 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A4660F7A210E008D00C52AB2 /* WeatherDataManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A4660F38210DFA2200C52AB2 /* Sky */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4660F61210DFA2400C52AB2 /* Build configuration list for PBXNativeTarget "Sky" */;
+			buildPhases = (
+				A4660F35210DFA2200C52AB2 /* Sources */,
+				A4660F36210DFA2200C52AB2 /* Frameworks */,
+				A4660F37210DFA2200C52AB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sky;
+			productName = Sky;
+			productReference = A4660F39210DFA2200C52AB2 /* Sky.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A4660F4C210DFA2400C52AB2 /* SkyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4660F64210DFA2400C52AB2 /* Build configuration list for PBXNativeTarget "SkyTests" */;
+			buildPhases = (
+				A4660F49210DFA2400C52AB2 /* Sources */,
+				A4660F4A210DFA2400C52AB2 /* Frameworks */,
+				A4660F4B210DFA2400C52AB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4660F4F210DFA2400C52AB2 /* PBXTargetDependency */,
+			);
+			name = SkyTests;
+			productName = SkyTests;
+			productReference = A4660F4D210DFA2400C52AB2 /* SkyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A4660F57210DFA2400C52AB2 /* SkyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4660F67210DFA2400C52AB2 /* Build configuration list for PBXNativeTarget "SkyUITests" */;
+			buildPhases = (
+				A4660F54210DFA2400C52AB2 /* Sources */,
+				A4660F55210DFA2400C52AB2 /* Frameworks */,
+				A4660F56210DFA2400C52AB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4660F5A210DFA2400C52AB2 /* PBXTargetDependency */,
+			);
+			name = SkyUITests;
+			productName = SkyUITests;
+			productReference = A4660F58210DFA2400C52AB2 /* SkyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A4660F31210DFA2200C52AB2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = flex;
+				TargetAttributes = {
+					A4660F38210DFA2200C52AB2 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					A4660F4C210DFA2400C52AB2 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = A4660F38210DFA2200C52AB2;
+					};
+					A4660F57210DFA2400C52AB2 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = A4660F38210DFA2200C52AB2;
+					};
+				};
+			};
+			buildConfigurationList = A4660F34210DFA2200C52AB2 /* Build configuration list for PBXProject "Sky" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A4660F30210DFA2200C52AB2;
+			productRefGroup = A4660F3A210DFA2200C52AB2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4660F38210DFA2200C52AB2 /* Sky */,
+				A4660F4C210DFA2400C52AB2 /* SkyTests */,
+				A4660F57210DFA2400C52AB2 /* SkyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A4660F37210DFA2200C52AB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4660F47210DFA2400C52AB2 /* LaunchScreen.storyboard in Resources */,
+				A4660F44210DFA2400C52AB2 /* Assets.xcassets in Resources */,
+				A4660F42210DFA2200C52AB2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4660F4B210DFA2400C52AB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4660F56210DFA2400C52AB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A4660F35210DFA2200C52AB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4660F7B210E008D00C52AB2 /* WeatherDataManager.swift in Sources */,
+				A4660F3F210DFA2200C52AB2 /* ViewController.swift in Sources */,
+				A4660F78210DFFBE00C52AB2 /* WeatherData.swift in Sources */,
+				A4660F3D210DFA2200C52AB2 /* AppDelegate.swift in Sources */,
+				A4660F75210DFF4300C52AB2 /* Location.swift in Sources */,
+				A4660F72210DFE4E00C52AB2 /* Configuratioin..swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4660F49210DFA2400C52AB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4660F52210DFA2400C52AB2 /* SkyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4660F54210DFA2400C52AB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4660F5D210DFA2400C52AB2 /* SkyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A4660F4F210DFA2400C52AB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4660F38210DFA2200C52AB2 /* Sky */;
+			targetProxy = A4660F4E210DFA2400C52AB2 /* PBXContainerItemProxy */;
+		};
+		A4660F5A210DFA2400C52AB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4660F38210DFA2200C52AB2 /* Sky */;
+			targetProxy = A4660F59210DFA2400C52AB2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A4660F40210DFA2200C52AB2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4660F41210DFA2200C52AB2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A4660F45210DFA2400C52AB2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4660F46210DFA2400C52AB2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A4660F5F210DFA2400C52AB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A4660F60210DFA2400C52AB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A4660F62210DFA2400C52AB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Sky/SupportiongFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flex.Sky;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A4660F63210DFA2400C52AB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Sky/SupportiongFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flex.Sky;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A4660F65210DFA2400C52AB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SkyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flex.SkyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sky.app/Sky";
+			};
+			name = Debug;
+		};
+		A4660F66210DFA2400C52AB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SkyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flex.SkyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sky.app/Sky";
+			};
+			name = Release;
+		};
+		A4660F68210DFA2400C52AB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SkyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flex.SkyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Sky;
+			};
+			name = Debug;
+		};
+		A4660F69210DFA2400C52AB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SkyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flex.SkyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Sky;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A4660F34210DFA2200C52AB2 /* Build configuration list for PBXProject "Sky" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4660F5F210DFA2400C52AB2 /* Debug */,
+				A4660F60210DFA2400C52AB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4660F61210DFA2400C52AB2 /* Build configuration list for PBXNativeTarget "Sky" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4660F62210DFA2400C52AB2 /* Debug */,
+				A4660F63210DFA2400C52AB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4660F64210DFA2400C52AB2 /* Build configuration list for PBXNativeTarget "SkyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4660F65210DFA2400C52AB2 /* Debug */,
+				A4660F66210DFA2400C52AB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4660F67210DFA2400C52AB2 /* Build configuration list for PBXNativeTarget "SkyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4660F68210DFA2400C52AB2 /* Debug */,
+				A4660F69210DFA2400C52AB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A4660F31210DFA2200C52AB2 /* Project object */;
+}
