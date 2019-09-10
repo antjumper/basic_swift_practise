@@ -16,4 +16,5 @@ var c = 2
 let name = "myname"
 
 let fullName = "\(name) 把name以字符串插值的形式连接进来"
+print(fullName)
 
