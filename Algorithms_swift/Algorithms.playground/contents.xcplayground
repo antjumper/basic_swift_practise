@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios'>
+    <pages>
+        <page name='ViewPage'/>
+        <page name='IndexPage'/>
+        <page name='PrintSorted'/>
+        <page name='LinkedList'/>
+        <page name='StackPage'/>
+        <page name='QueuePage'/>
+        <page name='TreePage'/>
+        <page name='BinaryTreePage'/>
+        <page name='TriesPage'/>
+        <page name='BinarySearchPage'/>
+        <page name='HeapPage'/>
+    </pages>
+</playground>
