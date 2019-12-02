@@ -329,3 +329,12 @@ func mergeSortBottomUp<T>(_ a: [T], _ isOrderedBefore: (T, T) -> Bool) -> [T] {
 //print(mergeSortBottomUp(array, <))
   // [1, 2, 4, 5, 9]
 
+//for var index = 4000; index < 8000; index++ {
+//   print("月供 \(index) 元 首付 \(332000 - index * 24)")
+//    index += 100
+//}
+
+for var index = 3000; index < 6000; ++index {
+    print("月供 \(index) 元 首付 \(410000 - index * 30)")
+    index = index + 99
+}
