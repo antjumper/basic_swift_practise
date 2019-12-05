@@ -55,6 +55,220 @@ import UIKit
 //isPalindrome(1221)
 
 
+//罗马数字转字符
+//func romanToInt(_ s: String) -> Int {
+//    //映射的字典
+//    var dict:[String:Int] = [:]
+//    dict["I"] = 1
+//    dict["V"] = 5
+//    dict["X"] = 10
+//    dict["L"] = 50
+//    dict["C"] = 100
+//    dict["D"] = 500
+//    dict["M"] = 1000
+//    var num = 0
+//    //遍历字符串
+//    for index in s.indices {
+//        //根据规则 前面的序列位小于后面的就是减去当前映射的值
+//        //当前面的序列为大于等于后面的序列位就加上当前的映射的值
+//
+//        if index != s.index(before: s.endIndex) {
+//
+//            let nextIndex = s.index(after: index)
+//            let startEnd = s.index(index, offsetBy: 1)
+//            let endEnd = s.index(nextIndex, offsetBy: 1)
+//            let cur = dict[String(s[index ..< startEnd])]
+//            let net = dict[String(s[nextIndex ..< endEnd])]
+//
+//            if  let cur = cur,let net = net,cur >= net {
+//                num += cur
+//            }else{
+//                let startEnd = s.index(index, offsetBy: 1)
+//                let cur = dict[String(s[index ..< startEnd])]
+//                num -= cur!
+//            }
+//        }else {
+//            let startEnd = s.index(index, offsetBy: 1)
+//            let cur = dict[String(s[index ..< startEnd])]
+//            num += cur!
+//        }
+//
+//    }
+//    return num
+//
+//}
+//
+////romanToInt("XXVII")
+////romanToInt("LVIII")
+//
+//romanToInt("MCMXCIV")
+
+//
+////最长公共前缀
+//func longestCommonPrefix(_ strs: [String]) -> String {
+//    //如果是空串
+//    if(strs.isEmpty){
+//        return ""
+//    }
+//    //默认一个最长子串
+//    var ans = strs[0]
+//    //遍历字符串数组 两两比较  取出当前的最小子串
+//    for i in 1..<strs.count {
+//        let currentStr = strs[i]
+//        var lastIndex = -1
+//        for j in 0..<min(ans.count,currentStr.count) {
+//
+//            print("i = \(i),ans= \(ans),curr = \(currentStr),j = \(j)")
+//            lastIndex = j
+//            if ans[ans.index(ans.startIndex, offsetBy: j)] != currentStr[currentStr.index(currentStr.startIndex, offsetBy: j)] {
+//                lastIndex -= 1
+//                break
+//            }
+//        }
+//        //如果当前的最小子串比默认的子串小 那么就ans 替换成较小的一个
+//        if(lastIndex == -1){//如果一个相等的都没有
+//            return ""
+//        }
+//        let temp = String(ans[ans.startIndex ... ans.index(ans.startIndex, offsetBy: lastIndex)])
+//        if temp.isEmpty {
+//            return ""
+//        }
+//        if temp.count < ans.count {
+//            ans = String(temp)
+//        }
+//    }
+//    return ans
+//}
+//
+//longestCommonPrefix(["dog","racecar","car"])
+//
+//longestCommonPrefix(["flower","flow","flight"])
+//longestCommonPrefix(["c","c"])
+
+//
+////有效的括号
+//func isValid(_ s: String) -> Bool {
+//    //数组模拟栈
+//    var stackArr:[Character] = []
+//    //遍历字符串如果是左括号就入栈 如果是右括号就出栈 出栈匹配的话 那么就x继续遍历 如果遍历完之后stack是空那么就合法 否则不合法
+//    //'('，')'，'{'，'}'，'['，']'
+//    for c in s {
+//        if (c == "(" || c == "{" || c == "[") {
+//            stackArr.append(c)
+//        }else if  c == "}" {
+//
+//            guard !stackArr.isEmpty else {
+//                return false
+//            }
+//            let char = stackArr[stackArr.count - 1]
+//            if char == "{" {
+//                stackArr.remove(at: stackArr.count - 1)
+//            }else {
+//                return false
+//            }
+//
+//        }else if  c == "]" {
+//            guard !stackArr.isEmpty else {
+//                return false
+//            }
+//
+//            let char = stackArr[stackArr.count - 1]
+//            if char == "[" {
+//                stackArr.remove(at: stackArr.count - 1)
+//            }else {
+//                return false
+//            }
+//
+//        }else if  c == ")" {
+//            guard !stackArr.isEmpty else {
+//                return false
+//            }
+//            let char = stackArr[stackArr.count - 1]
+//           if char == "(" {
+//               stackArr.remove(at: stackArr.count - 1)
+//           }else {
+//               return false
+//           }
+//        }
+//
+//
+//    }
+//    if !stackArr.isEmpty {
+//        return false
+//    }
+//
+//    return true
+//}
+//
+//isValid("()[]{}")
+//
+////
+//isValid("([)]")
+
+// 链表
+
+//public class ListNode {
+//     public var val: Int
+//     public var next: ListNode?
+//     public init(_ val: Int) {
+//         self.val = val
+//         self.next = nil
+//     }
+//}
+//
+//
+//
+//func mergeTwoLists(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
+//
+//    var p = ListNode(-1)
+//    let s = p
+//
+//    var leftP = l1;
+//    var rightP = l2
+//    //1 2 4 1 3 4
+//    while leftP != nil && rightP != nil {
+//        if leftP!.val > rightP!.val {
+//
+//            print("测试--2链表小")
+//            p.next = rightP
+//            rightP = rightP!.next
+//        }else {
+//            p.next = leftP
+//            leftP = leftP!.next
+//            print("测试--1链表小")
+//
+//        }
+//        p = p.next!
+//
+//    }
+//
+//    if let _ = leftP{
+//        p.next = leftP!
+//    }
+//    if let _ = rightP{
+//        p.next = rightP!
+//    }
+//
+//    return s.next
+//}
+//
+//// [1,2,4]
+////[1,3,4]
+//var list1 = ListNode(1)
+//list1.next = ListNode(2)
+//list1.next?.next = ListNode(4)
+//
+//var list2 = ListNode(1)
+//list2.next = ListNode(3)
+//list2.next?.next = ListNode(4)
+//
+//var mergeNode = mergeTwoLists(list1, list2)
+//
+//while mergeNode != nil {
+//    print(mergeNode!.val)
+//    mergeNode = mergeNode?.next
+//}
+
 
 ////删除排序数组中的重复项
 ////注意传入的数组就是要修改的数组
