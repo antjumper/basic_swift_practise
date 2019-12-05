@@ -128,7 +128,7 @@ var mixString :String = "Swift很有趣"
 //        }
 
 //Range的查找和替换
-if let cnIndex = mixString.index(of: "很") {
+if let cnIndex = mixString.firstIndex(of: "很") {
     mixString.replaceSubrange(cnIndex ..< mixString.endIndex, with: " is intersting")
     print(mixString)
 }
@@ -138,7 +138,7 @@ let swiftView = mixString.suffix(12).dropLast();
 print(String(swiftView))
 
 
-let strViews = mixString.characters.split(separator: " ")
+let strViews = mixString.split(separator: " ")
 strViews.map(String.init)
 // ["Swift", "3.0", "is", "interesting!"]
 
