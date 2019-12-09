@@ -397,3 +397,188 @@ func strStr(_ haystack:String,_ needle:String) -> Int {
 
 //strStr("hello", "ll")
 
+//KMP
+
+//38 报数
+//当前数是对前一个数的读数
+//func countAndSay(_ n: Int) -> String {
+//
+//    if(n == 1){
+//        return "1"
+//    }
+//    //当前数需要获取上一个数
+//    let str = countAndSay(n - 1)
+//    let zero:Character = "0"
+//
+//    //数组保存读取的结果
+//    var res:[Int] = [Int]()
+//    var count = 0;
+//    var cha = str[str.startIndex]
+//    for value in str {
+//        //相等 计数器加一
+//        if value == cha {
+//            count += 1
+//        }else {//不相等 切换char count 而且要读取了
+//            res.append(count)
+//            res.append(Int(cha.asciiValue! - zero.asciiValue!))
+//            cha = value
+//            count = 1
+//        }
+//    }
+//    res.append(count)
+//    res.append(Int(cha.asciiValue! - zero.asciiValue!))
+//    return res.compactMap { String($0) }.joined(separator: "")
+//
+//}
+//
+//countAndSay(2)
+//countAndSay(5)
+//countAndSay(30)
+
+//53 最大子序和
+//暴力解法 O(n^2)
+//func maxSubArray(_ nums: [Int]) -> Int {
+//
+//    var max = Int.min
+//
+//    for i_index in 0 ..< nums.count {
+//        var sum = 0
+//        for j_index in i_index ..< nums.count {
+//            sum += nums[j_index]
+//            if sum > max {
+//                max = sum
+//            }
+//        }
+//    }
+//    return max
+//}
+//
+//maxSubArray([-2,1,-3,4,-1,2,1,-5,4])
+
+//动态规划 O(n)
+/*
+如果 sum > 0，则说明 sum 对结果有增益效果，则 sum 保留并加上当前遍历数字
+如果 sum <= 0，则说明 sum 对结果无增益效果，需要舍弃，则 sum 直接更新为当前遍历数字
+*/
+//func maxSubArray(_ nums: [Int]) -> Int {
+//    var m = Int.min
+//    var sum = 0
+//    for value in nums {
+//        if sum > 0 {
+//             sum += value//sum 有增益的效果 后续可能会出现最大
+//        }else {//sum 有减益的效果 后续不可能出现连续的最大 所以直接重新开始计算
+//            sum = value
+//        }
+//        m = max(sum, m)
+//    }
+//    return m
+//}
+//maxSubArray([-2,1,-3,4,-1,2,1,-5,4])
+
+//分治思想的解法  这个暂时没有去研究
+
+
+// 66 加一
+//func plusOne(_ digits: [Int]) -> [Int] {
+//    var carry = 0;
+//    var arr = Array(digits)
+//    for index in (0..<digits.count).reversed() {
+//        if digits[index] == 9 {
+//            arr[index] = 0
+//            carry = 1
+//        }else {
+//            arr[index] += 1
+//            carry = 0
+//            break;
+//        }
+//    }
+//    if(carry == 1){
+//        arr.insert(1, at: 0)
+//    }
+//    return arr;
+//}
+//
+//plusOne([4,3,2,1])
+//plusOne([9,9,9,9])
+//plusOne([4,9,9,9])
+
+//x的平方根
+//https://leetcode-cn.com/problems/sqrtx/solution/er-fen-cha-zhao-niu-dun-fa-python-dai-ma-by-liweiw/
+//func mySqrt(_ x: Int) -> Int {
+//    if x == 0 {
+//        return 0
+//    }
+//    var left = 1
+//    var right = Int(x / 2)
+//    while left < right {
+//        let mid =  left + Int(((right + 1) - left )/2)//这里一定取右中位数，如果取左中位数，代码会进入死循环 所以加一 要不会造成死循环 比如 9
+//        let square = mid * mid
+//        if square > x {
+//            right = mid - 1
+//        }else {
+//            left = mid
+//        }
+//    }
+//    return Int(left)
+//}
+//mySqrt(15)
+
+
+//70. 爬楼梯
+// f(n) = f(n-1) + f(n-2)
+//func climbStairs(_ n: Int) -> Int {
+//    if n<3 {
+//        return n
+//    }
+//    var first = 1
+//    var second = 2
+//    for _ in 3 ..< n+1 {
+//        let next = first + second
+//        first = second
+//        second = next
+//    }
+//    return second
+//}
+//
+//climbStairs(3)
+
+//88. 合并两个有序数组
+
+//从头开始遍历的话 那么需要一个新的m 个控件的数组存储nums1里面的值 然后遍历把所有的值存储到num1里面去
+
+// 2 第二种方法是把 尾部开始存储 就能节省m个控件
+
+//func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
+//
+//    var mindex = m-1
+//    var nindex = n-1
+//    var mergeIndex = m+n-1
+//    while mindex >= 0 && nindex >= 0 {
+//        if nums1[mindex] > nums2[nindex] {
+//            nums1[mergeIndex] = nums1[mindex]
+//            mindex -= 1
+//        }else {
+//            nums1[mergeIndex] = nums2[nindex]
+//            nindex -= 1
+//        }
+//        mergeIndex -= 1
+//    }
+//
+//    while mindex >= 0 {
+//        nums1[mergeIndex] = nums1[mindex]
+//        mergeIndex -= 1
+//        mindex -= 1
+//    }
+//
+//    while nindex >= 0 {
+//        nums1[mergeIndex] = nums2[nindex]
+//        mergeIndex -= 1
+//        nindex -= 1
+//    }
+//}
+//var nums1 = [1,2,3,0,0,0]
+//var m = 3
+//var nums2 = [2,5,6]
+//var n = 3
+//merge(&nums1, 3, nums2, 3)
+
