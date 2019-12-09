@@ -301,3 +301,99 @@ import UIKit
 //}
 
 //实现 strStr()
+//KMP算法详解：http://www.ruanyifeng.com/blog/2013/05/Knuth–Morris–Pratt_algorithm.html
+//Sunday 算法：https://leetcode-cn.com/problems/implement-strstr/solution/python3-sundayjie-fa-9996-by-tes/
+
+//sunday 算法 最坏的情况是O(nm) 平均是O()
+/*
+ 匹配机制：
+ 目标字符串String
+
+ 模式串 Pattern
+
+ 当前查询索引 idx （初始为0）
+
+ 待匹配字符串 str_cut : String [ idx : idx + len(Pattern) ]
+
+ 每次匹配都会从 目标字符串中 提取 待匹配字符串与 模式串 进行匹配：
+
+ 若匹配，则返回当前 idx
+
+ 不匹配，则查看 待匹配字符串 的后一位字符 c：
+
+ 若c存在于Pattern中，则 idx = idx + 偏移表[c]
+
+ 否则，idx = idx + len(pattern)
+
+ Repeat Loop 直到 idx + len(pattern) > len(String)
+
+ 偏离表：
+ 偏移表的作用是存储每一个在 模式串 中出现的字符，在 模式串 中出现的最右位置到尾部的距离+1
+例如 aab：
+ a 的偏移位就是 len(pattern)-1 = 2
+ b 的偏移位就是 len(pattern)-2 = 1
+ 其他的字符均为 len(pattern)+1 = 4
+
+ */
+func strStr(_ haystack:String,_ needle:String) -> Int {
+    print("needle.count= \(needle.count) haystack.count = \(haystack.count)")
+
+    if needle.count > haystack.count {
+        return -1
+    }
+    
+    if needle.isEmpty || needle == haystack {
+        return 0
+    }
+    
+    //生成偏差表
+    var offsetTable = [Character:Int]()
+    for index in 0 ..< needle.count {
+        offsetTable[needle[needle.index(needle.startIndex, offsetBy: index)]] = needle.count - index
+    }
+    
+    print("offsetTable = \(offsetTable)")
+
+    
+    //开始遍历的指针
+    var idx = 0
+    while idx + needle.count <= haystack.count {
+        //获取待匹配的字符
+        let strIndex = haystack.index(haystack.startIndex, offsetBy: idx);
+        print("获取待匹配的字符 strIndex = \(strIndex)")
+
+        let endIndex = haystack.index(haystack.startIndex, offsetBy:idx + needle.count)
+        print("获取待匹配的字符 endIndex = \(endIndex)")
+
+        let str_cut = String(haystack[strIndex ..< endIndex])
+        print("str_cut = \(str_cut)")
+        if str_cut == needle {
+            return idx
+        }else {
+            //处理边界情况
+            if idx + needle.count >= haystack.count {
+                return -1
+            }
+            //不匹配的情况下 根据下一个字符去偏移 idx
+            
+            let charIndex = haystack.index(haystack.startIndex, offsetBy: idx + needle.count )
+            let cur_char = haystack[charIndex]
+            print("不匹配的情况下 charIndex = \(charIndex) cur_char = \(cur_char)")
+
+            if offsetTable[cur_char] != nil {
+                idx += offsetTable[cur_char]!
+            }else {
+                idx += needle.count + 1
+            }
+            
+            print("对比结束后的idx = \(idx)")
+        }
+    }
+    
+    return (idx + needle.count >= haystack.count) ? -1 : idx
+}
+
+//strStr("aaaaa", "bba")
+
+//strStr("hello", "ll")
+
