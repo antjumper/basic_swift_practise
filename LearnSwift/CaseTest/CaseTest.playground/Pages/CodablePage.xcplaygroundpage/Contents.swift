@@ -60,6 +60,8 @@ encoder.dateEncodingStrategy = .iso8601
 data = try! encoder.encode(entity_2)
 
 //Date转成的样子是这样  "createdAt" : 589883274.77192402
+print("adadas")
+
 print(String(data: data, encoding: String.Encoding.utf8) ?? "default value")
 
 //为了处理时间的这种情况

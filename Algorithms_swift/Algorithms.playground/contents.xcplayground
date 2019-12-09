@@ -12,5 +12,7 @@
         <page name='TriesPage'/>
         <page name='BinarySearchPage'/>
         <page name='HeapPage'/>
+        <page name='PriorityQueuePage'/>
+        <page name='SortPage'/>
     </pages>
 </playground>

@@ -38,7 +38,7 @@ struct StudentList:Codable {
         
         static let name = StudentInfo(stringValue:"name")!
         
-        //stringValue和intValue属性，以及接受String和Int为参数的init方法是protocol强制要求的，我们必须定义它们。稍后就会看到，由于我们可以从JSON的key中读到id，因此在StudentInfo里，我们只要在最后，定义name在model中的映射规则就好了。
+        //stringValue和intValue属性，以及接受String和Int为参数的init方法是protocol强制要求的，我们必须定义它们。由于我们可以从JSON的key中读到id，因此在StudentInfo里，我们只要在最后，定义name在model中的映射规则就好了。
     }
     
     init(from decoder:Decoder) throws {
@@ -46,8 +46,8 @@ struct StudentList:Codable {
         var v = [Student]()
         for key in container.allKeys {
             let innerContainer = try container.nestedContainer(keyedBy:StudentInfo.self,forKey:key)
-            let title = try innerContainer.decode(String.self, forKey: .name)
-            let stud = Student(id: Int(key.stringValue)!, name: title)
+            let name = try innerContainer.decode(String.self, forKey: .name)
+            let stud = Student(id: Int(key.stringValue)!, name: name)
             v.append(stud)
         }
         self.students = v
